@@ -1,0 +1,9 @@
+const MONGODB_URI = ``;
+const DEFAULT_PASSWORD = ``
+const NO_USERS_TO_CREATE = 100;
+
+module.exports = {
+  MONGODB_URI,
+  DEFAULT_PASSWORD,
+  NO_USERS_TO_CREATE
+};
