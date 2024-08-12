@@ -79,8 +79,8 @@ function createUserData(count) {
     const forename = faker.person.firstName();
     const surname = faker.person.lastName();
     persons.push({
-      _id: faker.string.uuid().replace(/-/g,""),
-      email: faker.internet.email().toLowerCase(),
+        _id: faker.string.uuid().replace(/-/g,""),
+        email: faker.internet.email({ firstName: forename, lastName: surname }).toLowerCase(),
       forename,
       surname,
       password: DEFAULT_PASSWORD,
@@ -96,8 +96,8 @@ function createAcspData(count) {
     const companyName = faker.company.name();
     console.log(companyName);
     acsps.push({
-      _id: faker.string.uuid().replace(/-/g,""),
-      acsp_name: companyName,
+        _id: faker.string.uuid().replace(/-/g,""),
+        acsp_name: companyName,
       acsp_status: "active",
       version: 0,
       _class: "uk.gov.companieshouse.acsp.manage.users.model.AcspDataDao",
