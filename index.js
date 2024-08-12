@@ -78,14 +78,14 @@ function createUserData(count) {
   for (let i = 0; i < count; i += 1) {
     const forename = faker.person.firstName();
     const surname = faker.person.lastName();
-    const displayNameOptions = ["", "Not Provided", `${forename} ${surname}`]
+    const displayNameOptions = ["Not Provided", `${forename} ${surname}`]
     persons.push({
         _id: faker.string.uuid().replace(/-/g,""),
         email: faker.internet.email({ firstName: forename, lastName: surname }).toLowerCase(),
       forename,
       surname,
       password: DEFAULT_PASSWORD,
-      display_name: displayNameOptions[Math.floor(Math.random() * 3)],
+      display_name: displayNameOptions[Math.floor(Math.random() * 2)],
     });
   }
   return persons;
