@@ -81,7 +81,7 @@ function createUserData(count) {
     const displayNameOptions = ["Not Provided", `${forename} ${surname}`]
     persons.push({
         _id: faker.string.uuid().replace(/-/g,""),
-        email: faker.internet.email({ firstName: forename, lastName: surname }).toLowerCase(),
+        email: faker.internet.email({ firstName: `inugami_test_data_${forename}`, lastName: surname }).toLowerCase(),
       forename,
       surname,
       password: DEFAULT_PASSWORD,
